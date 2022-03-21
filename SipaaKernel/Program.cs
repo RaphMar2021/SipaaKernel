@@ -9,12 +9,13 @@ namespace SipaaKernel
 {
     internal class Program
     {
-        
+        public static bool CloseRequest;
         [STAThread]
         static void Main(string[] args)
         {
             var kernel = new SipaaKrnl();
-            Console.ReadKey();
+            while (!CloseRequest) { }
+            
         }
     }
 }
